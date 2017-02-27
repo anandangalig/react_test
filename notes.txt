@@ -1,0 +1,8 @@
+Set-Up:
+
+1) Webpack -  REACT favored module loader ( e.g. require.js and Browserify). Takes separated JS files that handle specific tasks (modules), then compress/minify to run in the browser.
+  a) npm install -g webpack; npm install -S webpack;
+  b) touch webpack.config.js (source: https://github.com/learncodeacademy/react-js-tutorials/tree/master/1-basic-react) - where you designate the I/O files; run webpack!
+  c) now the app can npm install any number of tools(#jQuery, lodash,...), require it in the desired module, then webpack it into a nice coherent app that is low-weight.
+
+2) Babel - transpiles our JSX (react) code and ES6 into all browser friendly JS.

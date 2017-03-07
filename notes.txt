@@ -34,4 +34,5 @@ Set-Up:
           const name = "Anand";
           return ( <Header my_name={name} />); (or a string can be used <Header title={"Anand"} />)
 
-    --> And now any child component who received the my_name, has access to this.props.name! (within render, but before return!) 
+    --> And now any child component who received the my_name, has access to this.props.name! (within render, but before return!)
+    --> Can pass Data down to Child components and Actions up to the parent: make sure the objects being passed up matches with at parameters it is being used for. 

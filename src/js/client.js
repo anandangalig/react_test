@@ -4,30 +4,7 @@ import Layouts from './components/Layouts'; //importing the Layouts component th
 
 
 //Defining a component:
-
-class Button extends React.Component {
-  render() {
-    return (<button class="btn btn-success" onClick={this.props.localHandleClick}>+1</button>);
-  }
-};
-
-// Defining another component:
-class Result extends React.Component {
-  render() {
-    return (<div>{this.props.localCounter}</div>);
-  }
-};
-
-
-//Defining the main component that houses the otheres
-
 class Main extends React.Component {
-//   getInitialState: function() { //global function that is seeding data for the component's internally-controlled state
-//   return {counter: 0};
-// },
-//   handleClick: function() {
-//     this.setState({ counter: this.state.counter + 1 });
-//   },
   render() {
     var name = "Anand";
     return (
@@ -37,8 +14,6 @@ class Main extends React.Component {
         <h1>It can render Const: {name}</h1>
         <Layouts />
       </div>);
-      // <Button localHandleClick={this.handleClick} />
-      // <Result localCounter={this.state.counter} />
     };
 };
 

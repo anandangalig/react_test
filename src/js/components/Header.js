@@ -9,7 +9,7 @@ export default class Header extends React.Component { //exporting this component
   render() {
     return (
       <div>
-        <p>A this.state passed from Parent => this.props.name: {this.props.name}</p>
+        <p>A this.state passed from Parent & being updated via this.props.function => this.props.name: {this.props.name}</p>
         <input onChange={this.handleChange.bind(this)} />
       </div>
     );

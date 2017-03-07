@@ -13,4 +13,25 @@ Set-Up:
 
 2) Babel - transpiles our JSX (react) code and ES6 into all browser friendly JS.
 
-3) React and ReactDOM
+3) React and ReactDOM: uses Diff (virtual DOM vs actual DOM) to figure out the changed pieces and render that sliver only => FAST!
+  * React.createClass() === class XYZ extends React.Component
+  * Components render separate pieces and get exported/imported accordingly
+  * this.state
+    --> scoped to the current component ONLY!!!
+    --> this.state === null by default;
+    --> this.state gets updated automatically with changes
+    --> to create one:
+          constructor() {
+            super();
+            this.state = {name: "Anand"};
+          }
+    --> to change the state later:
+          this.setState({name : "Tuya"});
+
+  * this.props:
+    --> the way React passes data (turned into an object) to other components.
+    --> From the Parent component's render():
+          const name = "Anand";
+          return ( <Header my_name={name} />); (or a string can be used <Header title={"Anand"} />)
+
+    --> And now any child component who received the my_name, has access to this.props.name! (within render, but before return!) 
